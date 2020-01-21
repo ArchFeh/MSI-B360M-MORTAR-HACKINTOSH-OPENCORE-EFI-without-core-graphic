@@ -670,9 +670,9 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>C02746270CDJG361M</string>
+			<string></string>
 			<key>ROM</key>
-			<data>geMkEZ6r</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SupportsCsm</key>
@@ -680,9 +680,9 @@
 			<key>SystemProductName</key>
 			<string>iMacPro1,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02VPCZWHX87</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>3F0B89FF-310F-4104-ADF4-81E324119EAB</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
