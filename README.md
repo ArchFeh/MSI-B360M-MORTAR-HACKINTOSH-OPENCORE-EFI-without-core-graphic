@@ -33,24 +33,6 @@
 |        无线 + 蓝牙 | BCM94360CD（双频 1750M + 蓝牙 4.0）PCI-E 无线网卡  |
 |             耳机 | Razer Kraken 7.1 V2雷蛇北海巨妖  |
 
-### 兼容的配置
-
-|         硬件       |                              型号                           |
-|-------------------:|:------------------------------------------------------------|
-|               主板 | 微星 B360M 迫击炮                                    |
-|             处理器 | 英特尔第 8 代、第 9 代酷睿处理器               |
-|               显卡 | RX 560 / RX 570 / RX 580 / RX 590 / RX VEGA⁵⁶ / RX VEGA⁶⁴ / Radeon VII / RX 5500 XT / RX 5700 / RX 5700 XT |
-|               硬盘 | 除了几个特例（如三星 PM981），基本都可以                               |
-|               内存 | 除了非常差的，基本都可以                                        |
-|        无线 + 蓝牙 | 黑苹果免驱版无线 + 蓝牙 PCI-E 网卡都可以                          |
-|     摄像头 + 麦克风 | macOS 免驱版都可以                                             |
-|  机箱 + 电源 + 风扇 | 根据个人喜好和 CPU、显卡的功率来决定                               |
-|             显示器 | 根据个人喜好选择（推荐 4K 分辨率）                                |
-|  键盘 + 鼠标 + 音箱 | 根据个人喜好选择                                                |
-|           其它外设 | 根据个人喜好选配                                              |
-
-*显卡优先选择蓝宝石，其次选择迪兰恒进、华硕和微星，尽量不选择盈通和讯景，一定避开 RX 580 2048SP 版本！*<br>
-*如果选择购买新显卡，推荐 RX 5500 XT、 RX 5700 和 RX 5700 XT 这三个型号。*<br>
 
 
 ## 更新记录
@@ -101,14 +83,6 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 ![](https://raw.githubusercontent.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/master/Images/Explain/ProperTree_PlatformInfo.png)<br>
 保存后，先通过 USB 测试引导，无问题后将 EFI 文件夹放置到启动磁盘 EFI 分区，重启电脑。
 
-### 核显使用
-适合使用核显处理器的用户。<br>
-1. 填入`iMac19,1`机型的三码 + ROM 信息到`/EFI/OC/config.plist`文件 PlatformInfo > Generic 处，并将机型修改为`iMac19,1`。
-3. 添加`/EFI/OC/config.plist`文件 DeviceProperties > Add > PciRoot(0x0)/Pci(0x2,0x0) 下 AAPL,ig-platform-id 这一行参数（如下图）。<br> 
-![](https://raw.githubusercontent.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/master/Images/Explain/ProperTree_DeviceProperties.png)
-5. 参考 [xjn 博客](https://blog.xjn819.com/?p=543) 的完善部分「3.4 加载原生电源管理」替换自己处理器对应的 SSDT-PLUG.aml 到`/EFI/OC/ACPI/`目录。
-<br>
-保存后，将 EFI 文件夹放置到启动磁盘 EFI 分区，重启电脑。
 
 ### 进阶使用
 1. 参考 [xjn 博客](https://blog.xjn819.com/?p=543) 的进阶部分「4.1 CPU 的变频优化」生成`CPUFriendDataProvider.kext`HWP 变频文件，放入`/EFI/OC/Kexts/`，添加`/EFI/OC/config.plist`文件 Kernel > Add项
