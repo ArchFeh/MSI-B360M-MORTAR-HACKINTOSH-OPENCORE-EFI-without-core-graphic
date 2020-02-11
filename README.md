@@ -11,7 +11,7 @@
 
 ## EFI 介绍
 
-此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.5
+此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.6
 
 ### 可正常工作
 - [x] 网卡（板载）
@@ -36,7 +36,13 @@
 
 
 ## 更新记录
+#### 2020.02.12
+
+更新opencore到0.5.6最新版，config大改，具体再更新
+
+
 #### 2020.01.22
+
 添加300系主板原生支持NVRAM
 
 #### 2020.01.04
