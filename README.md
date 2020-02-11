@@ -11,7 +11,7 @@
 
 ## EFI 介绍
 
-此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.4
+此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.5
 
 ### 可正常工作
 - [x] 网卡（板载）
@@ -85,8 +85,7 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 
 
 ### 进阶使用
-1. 参考 [xjn 博客](https://blog.xjn819.com/?p=543) 的进阶部分「4.1 CPU 的变频优化」生成`CPUFriendDataProvider.kext`HWP 变频文件，放入`/EFI/OC/Kexts/`，添加`/EFI/OC/config.plist`文件 Kernel > Add项
-2. 参考 [黑果小兵博客](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html) 生成`USBPorts.kext`USB 定制文件，放入`/EFI/OC/Kexts/`替换同名文件，打开`/EFI/OC/config.plist`，关闭 Kernel > Add > 7，打开 8。<br>
+1. 参考 [黑果小兵博客](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html) 生成`USBPorts.kext`USB 定制文件，放入`/EFI/OC/Kexts/`替换同名文件，打开`/EFI/OC/config.plist`，关闭 Kernel > Add > 7，打开 8。<br>
 ![](https://raw.githubusercontent.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/master/Images/Explain/ProperTree_Kernel_USB.png)
 
 ## Q&A
