@@ -11,7 +11,8 @@
 
 ## EFI 介绍
 
-此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.6
+此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，## 但是没有注入声卡驱动 
+[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.6
 
 ### 可正常工作
 - [x] 网卡（板载）
