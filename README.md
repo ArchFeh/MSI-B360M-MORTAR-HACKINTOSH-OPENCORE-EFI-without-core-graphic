@@ -12,7 +12,7 @@
 ## EFI 介绍
 
 此 EFI 使用 iMacPro1.1 机型，微星 B360M 迫击炮 的**无核显**用户可直接修改使用，默认启用全部 USB 端口，**但是没有注入声卡驱动** 
-[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.6
+[OpenCore](https://github.com/acidanthera/OpenCorePkg) 版本：0.5.9
 
 ### 可正常工作
 - [x] 网卡（板载）
@@ -37,6 +37,11 @@
 
 
 ## 更新记录
+
+#### 2020.05.09
+
+更新opencore到0.5.9以及Lilu，WhateverGreen，VirtualSMC。将OpenCore分辨率显示调整为Hidpi。1080P的可以在NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-UIScale将02改为01。**依然没有添加对音频的支持**
+
 #### 2020.02.14
 
 更新opencore到最新开发版，去除不必要启动项slide=129以及删减不必要补丁。
