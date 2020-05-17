@@ -38,9 +38,12 @@
 
 ## 更新记录
 
+#### 2020.05.17
+添加OpenCore GUI，使开机更像白果。![](./gui.png)
+
 #### 2020.05.09
 
-更新opencore到0.5.9以及Lilu，WhateverGreen，VirtualSMC。将OpenCore分辨率显示调整为Hidpi。1080P的可以在NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-UIScale将02改为01。**依然没有添加对音频的支持**
+更新OpenCore到0.5.9以及Lilu，WhateverGreen，VirtualSMC。将OpenCore分辨率显示调整为Hidpi。1080P的可以在NVRAM-Add-4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14-UIScale将02改为01。**依然没有添加对音频的支持**
 
 #### 2020.02.14
 
