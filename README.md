@@ -16,13 +16,23 @@
 
 ### 可正常工作
 - [x] 网卡（板载）
+
 - [x] 显卡（独显）/ 硬解 4K（HEVC + H.264）
+
 - [x] WiFi（PCI-E 设备） / 蓝牙（PCI-E 设备）
+
 - [x] 隔空投送 / 接力 / 随航
+
 - [x] FaceTime / iMessage / Apple Music / Apple TV Plus
+
 - [x] 原生电源管理
+
 - [x] 自动睡眠 
+
 - [x] 其他白果功能（99%）
+
+### 不工作
+- [x] 板载声卡
 
 ### 我的配置
 
@@ -69,13 +79,15 @@ OpenCore 拥有高度的可定制化，建议先参考下面的说明使用配�
 
 ### BIOS 设置
 *请先确定正在使用的 BIOS 版本，[迫击炮](https://cn.msi.com/Motherboard/support/B360M-MORTAR) 7B23v16 以上，[迫击炮钛金版](https://cn.msi.com/Motherboard/support/B360M-MORTAR-TITANIUM) 7B23vA6 以上，否则请参考官方文档升级 BIOS 至最新版本。*<br>
+#### 必选
 <br>
-STTINGS\高级\PCI子系统设置\Above 4G memory/Crypto Currency mining [允许]<br>
+OC(Overclocking)\CPU 特征\Intel 虚拟化技术 [允许]（必须）<br>
+OC(Overclocking)\CPU 特征\Intel VT-D 技术 [禁止]（必须）<br>
+OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
+
+#### 可选
 <br>
 STTINGS\高级\ACPI设置\电源 LED 灯 [双色]（如果选择 [闪烁]，睡眠时电源灯将不断闪烁）<br>
-<br>
-STTINGS\高级\USB设置\XHCI Hand-off [允许]<br>
-STTINGS\高级\USB设置\传统USB支持 [允许]<br>
 <br>
 STTINGS\高级\电源管理设置\ErP Ready [允许]<br>
 <br>
@@ -87,14 +99,10 @@ STTINGS\高级\唤醒事件设置\唤醒事件管理 [BIOS]<br>
 STTINGS\高级\唤醒事件设置\USB设备从S3/S4/S5唤醒 [允许]<br>
 <br>
 STTINGS\启动\启动NumLock状态 [关]（macOS 默认可使用数字键盘）<br>
-<br>
-OC(Overclocking)\CPU 特征\Intel 虚拟化技术 [允许]（必须）<br>
-OC(Overclocking)\CPU 特征\Intel VT-D 技术 [禁止]（必须）<br>
-OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 
 ### 直接使用
 仅适合使用 9400F 处理器的用户！<br>
-下载整包后，如果之前在 Clover 时就使用`iMacPro1,1`机型，可直接使用之前的三码，或使用 [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) （其他工具亦可）选择`iMacPro1.1`机型生成新的三码 + ROM，用 ProperTree 打开`/EFI/OC/config.plist`文件，填入到 PlatformInfo > Generic 位置中（如下图）。<br>
+下载整包后，如果之前在 Clover 时就使用`iMacPro1,1`机型，可直接使用之前的三码，或使用[GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)  [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) （其他工具亦可）选择`iMacPro1.1`机型生成新的三码 + ROM，用 ProperTree 打开`/EFI/OC/config.plist`文件，填入到 PlatformInfo > Generic 位置中（如下图）。<br>
 ![](https://raw.githubusercontent.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/master/Images/Explain/ProperTree_PlatformInfo.png)<br>
 保存后，先通过 USB 测试引导，无问题后将 EFI 文件夹放置到启动磁盘 EFI 分区，重启电脑。
 
@@ -110,6 +118,10 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
    方法二：将 BIOS「STTINGS\启动\全荧幕商标」设置为 [允许]。<br>
    两种方法选择其一即可，经反复测试，在微星 B360M 迫击炮（钛金版）上我更推荐方法二。<br>
    *如果同时使用方法一和方法二，开机 logo 的显示依旧会不正常。*
+   
+## 链接
+OpenCorePkg [官方版本](https://github.com/acidanthera/OpenCorePkg/releases) [自动编译](https://github.com/williambj1/OpenCore-Factory/releases) / AppleSupportPkg [官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) [自动编译](https://github.com/athlonreg/AppleSupportPkg-Factory/releases) / [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/releases) / [Lilu](https://github.com/acidanthera/Lilu/releases) / [AppleALC](https://github.com/acidanthera/AppleALC/releases) / [WhateverGreen](https://github.com/acidanthera/WhateverGreen/releases) / [IntelMausi](https://github.com/acidanthera/IntelMausi/releases) / [VirtualSMC](https://github.com/acidanthera/VirtualSMC/releases) / [CPUFriend](https://github.com/acidanthera/CPUFriend/releases) / [OcBinaryData](https://github.com/acidanthera/OcBinaryData) / [MaciASL](https://github.com/acidanthera/MaciASL/releases) / [ProperTree](https://github.com/corpnewt/ProperTree) / [Hackintool](https://www.tonymacx86.com/threads/release-hackintool-v2-8-6.254559/) / [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2/releases)
+
 
 ## 写在最后
 作为一个黑果小白，欢迎指正错误及提出建议，我会及时更新此 EFI。
